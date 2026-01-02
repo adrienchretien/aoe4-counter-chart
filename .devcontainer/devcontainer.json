@@ -1,0 +1,12 @@
+{
+  "name": "aoe4-counter-chart",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "web",
+  "workspaceFolder": "/workspaces/app",
+  "postCreateCommand": "git submodule update --init --recursive && [ -d node_modules ] || npm install",
+  "forwardPorts": [
+    3000
+  ]
+}
